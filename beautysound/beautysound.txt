@@ -1,0 +1,82 @@
+CREATE DATABASE IF NOT EXISTS beautysound
+COLLATE 'gb2312_chinese_ci';
+
+USE beautysound;
+CREATE TABLE IF NOT EXISTS Admin (
+	AdminId		varchar(20)  PRIMARY KEY,
+	AdminPwd	varchar(20)
+);
+CREATE TABLE IF NOT EXISTS  Person (
+	UserName  varchar(40)  PRIMARY KEY,
+	UserPwd varchar(40)  NOT NULL,
+	RealName  varchar(50),
+	Sex  char(2),
+	Email	varchar(50),
+	PostTime	datetime
+);
+CREATE TABLE IF NOT EXISTS  Student (
+	RealName  varchar(50),
+        Pwd varchar(40)  NOT NULL,
+	Sex  char(2),
+	Birth  varchar(50),
+	Nature  varchar(20),
+	Married  varchar(10),
+	Education  varchar(20),
+	College	  varchar(50),
+	email  varchar(50),
+        describ  varchar(200),
+        tutors   varchar(20),
+	PostTime	datetime
+);
+CREATE TABLE IF NOT EXISTS  Tutor (
+	RealName  varchar(50),
+        Pwd varchar(40)  NOT NULL,        
+	Sex  char(2),
+        bestsong  varchar(200),
+        describ  varchar(200),
+        PostTime   datetime
+);
+CREATE TABLE IF NOT EXISTS News (
+	NewsId INT  AUTO_INCREMENT  PRIMARY KEY,
+	NTitle varchar(50), 
+	NContent varchar(1000),
+	PostTime datetime
+);
+
+
+CREATE TABLE IF NOT EXISTS Skill (
+	SId INT  AUTO_INCREMENT  PRIMARY KEY,
+	AppTitle	varchar(200),
+	English	varchar(100),
+	Computer	varchar(100),
+	MainSkill	varchar(2000),
+	UserName	varchar(20)
+);
+
+
+INSERT INTO Company (CID, CPwd, CName) VALUES('Admin', '111111', 'Admin');
+
+CREATE TABLE IF NOT EXISTS JobInfo (
+	JobId	int AUTO_INCREMENT  PRIMARY KEY,
+	UserName	varchar(40),
+	JobTitle	varchar(100),
+	JobType		varchar(20),
+	Education	varchar(20),
+	Sex	varchar(20),
+	Age	varchar(50),
+	WorkTime	varchar(50),
+	WorkPlace	varchar(50),
+	JobNum	int,
+	Comment	text,
+	PostTime	datetime
+);
+
+CREATE TABLE IF NOT EXISTS Applications (
+	AppId	int AUTO_INCREMENT  PRIMARY KEY,
+	JobId	int,
+	UserName	varchar(20),
+	PostDate	datetime,
+	Response	varchar(1000),
+	RspDate	datetime
+);
+
