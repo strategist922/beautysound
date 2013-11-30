@@ -59,7 +59,7 @@ Class News
 	//删除新闻信息
 	function DeleteNews($nids)
 	{
-		$strSql="Delete From News Where NewsId In (" . $nids . ")";
+		$strSql="Delete From News Where NewsId In (" & $nids & ")";
 		//执行INSERT语句
 		$this->conn->query($strSql);
 	} 

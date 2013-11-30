@@ -1,18 +1,19 @@
 <?PHP include('isAdmin.php'); ?>
 <html>
 <head>
-<title>±à¼­ĞÂÎÅĞÅÏ¢</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ç¼–è¾‘æ–°é—»ä¿¡æ¯</title>
 <link href=../style.css rel=STYLESHEET type=text/css>
 <script language="javascript">
   function checkFields()
   {
     if (myform.title.value=="") {
-       alert("ĞÂÎÅÌâÄ¿²»ÄÜÎª¿Õ");
+       alert("æ–°é—»é¢˜ç›®ä¸èƒ½ä¸ºç©º");
        myform.title.onfocus();
        return false;
     }
     if (myform.content.value=="") {
-       alert("ĞÂÎÅÄÚÈİ²»ÄÜÎª¿Õ");
+       alert("æ–°é—»å†…å®¹ä¸èƒ½ä¸ºç©º");
        myform.content.onfocus();
        return false;
     }
@@ -24,35 +25,35 @@
 
 <?PHP 
 	include('..\Class\News.php');
-	//´ÓÊı¾İ¿âÖĞÈ¡µÃ´ËĞÂÎÅĞÅÏ¢
+	//ä»æ•°æ®åº“ä¸­å–å¾—æ­¤æ–°é—»ä¿¡æ¯
 	$ns = new News();
-	//²ÎÊıid±íÊ¾ĞÂÎÅ±àºÅ
+	//å‚æ•°idè¡¨ç¤ºæ–°é—»ç¼–å·
 	$id=$_GET["id"];
 	$results = $ns->GetNewsInfo($id);
-	$exist = false;	// ÅĞ¶ÏÊÇ·ñ´æÔÚ
+	$exist = false;	// åˆ¤æ–­æ˜¯å¦å­˜åœ¨
 	if($row = $results->fetch_row()) {
 		$exist = true;
 ?>
 <form name="myform" method="POST" action="NewsSave.php?action=edit&id=<?PHP   echo($id); ?>" OnSubmit="return checkFields()"> 
       <table border="0" width="100%" cellspacing="1">
           <tr>
-            <td width="100%">ĞÂÎÅ±êÌâ 
+            <td width="100%">æ–°é—»æ ‡é¢˜ 
             <input type="text" name="title" size="20" value="<?PHP   echo($row[1]); ?>"></td>
           </tr>
           <tr>
-            <td width="100%">ĞÂÎÅÄÚÈİ</td>
+            <td width="100%">æ–°é—»å†…å®¹</td>
           </tr>
           <tr>
             <td width="100%"><textarea rows="12" name="content" cols="55"><?PHP   echo($row[2]); ?></textarea></td>
           </tr>
         </table>
-        <p align="center"><input type="submit" value=" Ìá ½» " name="B1">
-        <input type="reset" value=" ÖØĞ´ " name="B2"></p>
+        <p align="center"><input type="submit" value=" æ äº¤ " name="B1">
+        <input type="reset" value=" é‡å†™ " name="B2"></p>
 </form>
 <?PHP
 	} 
 	else  {
-		echo("Ã»ÓĞ´ËĞÂÎÅ");
+		echo("æ²¡æœ‰æ­¤æ–°é—»");
 	}
 ?>
 </body>

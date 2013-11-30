@@ -19,7 +19,6 @@ Class Person
 		// 关闭连接
 		mysqli_close($this->conn);
     }
-
 	//读取单个个人信息
 	function GetPersonInfo($uname)
 	{

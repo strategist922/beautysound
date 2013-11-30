@@ -12,14 +12,13 @@ function news90(url) {
   news90.focus();
   return false;
 }
-
 function SelectChk()
 {
 	var s=false;
 	var deptid,n=0;
 	var strid,strurl;
 	var nn = self.document.all.item("news")
-	for (j=0;j<nn.length;j++)
+	for (j=0;j<nn.length-1;j++)
 	{
 		if (self.document.all.item("news",j).checked)
 		{
@@ -36,7 +35,6 @@ function SelectChk()
 			}
 		}
 	}
-
 	strurl = "NewsDelt.php?id=" + strid;
 	if(!s)	{
 		alert("请选择要删除的新闻!");
@@ -91,8 +89,8 @@ function sltNull()
   <tr>
     <td><a href="../NewsView.php?id=<?PHP  echo($row[0]); ?>" onClick="return news90(this.href)"><?PHP     echo($row[1]); ?></a></td>
 	<td align="center"><?PHP     echo($row[3]); ?></td>
-    <td align="center"><a href="NewsEdit.php?id=<?PHP     echo($row[0]); ?>" onClick="return news90(this.href)">修改</a></td>
-    <td align="center"><input type="checkbox" name="news" id="<?PHP echo($row[0]); ?>"></td>
+    <td align="center"><a href="NewsEdit.php?id=<?PHP echo($row[0]); ?>" onClick="return news90(this.href)">修改</a></td>
+    <td align="center"><input name="news" type="checkbox" id="<?PHP echo($row[0]); ?>"></td>
   </tr>
 <?PHP 
 	} 
