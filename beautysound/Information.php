@@ -26,8 +26,9 @@ function newswin(url) {
 	$tu = new Tutor();
 
 	if ($flg==0)  {
-		$sTitle="学员信息";
-		$results = $st->GetPersonlist();
+		$sTitle="学员信息";?>
+		<a href="Search.php"><font color=blue>[学员查询]</font></a> 
+		<?PHP $results = $st->GetPersonlist();
 	}
 	else 
 	 {
@@ -51,7 +52,7 @@ function newswin(url) {
  <table border="1" width="100%" cellspacing="1" bordercolorlight="#A4A4FF" bordercolordark="#FFFFFF">
        <tr><?PHP if ($flg==0)  {
 ?>
-           
+          
          <td width="15%">姓名<td>个人描述</td><td width="5%">导师</td>
            <?PHP }
 			  else   {
@@ -64,7 +65,7 @@ function newswin(url) {
 	  while($row = $results->fetch_row())   {
 ?><tr>
 	  <td><a href='StudentView.php?id=<?PHP echo $row[0]; ?>' onClick='return newswin(this.href)'><?PHP     echo $row[0]; ?></a></td>
-	 <td><?PHP     echo $row[9]; ?></td> <td><?PHP     echo $row[10]; ?></td>
+	 <td><?PHP     echo $row[9]; ?></td> <td><a href='TutorView.php?id=<?PHP echo $row[10]; ?>' onClick='return newswin(this.href)'><?PHP     echo $row[10]; ?></a></td>
 	
 <?PHP  
      } 

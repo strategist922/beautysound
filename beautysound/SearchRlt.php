@@ -49,7 +49,7 @@ function newswin(url) {
 		$sql="Select * From Student Where RealName Like '%".$sKey."%' Order By PostTime Desc";
 	}
 	elseif ($sltCnd=="sex")  {
-		$sql="Select * From Student Where JobType Like '%".$sKey."%' Order By PostTime Desc";
+		$sql="Select * From Student Where Sex Like '%".$sKey."%' Order By PostTime Desc";
 	}
 	elseif ($sltCnd=="nature") {
 		$sql="Select * From Student Where Nature Like '%".$sKey."%' Order By PostTime Desc";

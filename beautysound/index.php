@@ -44,9 +44,7 @@ function newOrder(url) {
     include('class/News.php');
 	$m=0;
 	$ns = new News();
-	
 	$results = $ns->GetNewslist();
-	
 	while($row=$results->fetch_row())  {
 		$m++;
 		if($m>5)
@@ -128,7 +126,7 @@ function newOrder(url) {
 <?PHP
 	while($rr=$resultr->fetch_row())  {
 	 $m2++;
-		if($m2>3)
+		if($m2>2)
 			break;
 ?>
      <tr><td bgcolor="#FFFFFF"> 
