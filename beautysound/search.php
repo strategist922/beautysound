@@ -1,17 +1,8 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>学员查询</title>
-<link rel="stylesheet" href="style.css">
-<style type="text/css">
-<!--
-.STYLE1 {
-	font-size: x-large;
-	font-weight: bold;
-}
-.STYLE3 {font-size: 12pt}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href=style.css rel=STYLESHEET type=text/css>
 </head>
 <body>
 <form method="POST" action="SearchRlt.php">
@@ -23,19 +14,7 @@
       <td width="100%" colspan="2" align="center"></td>
      </tr>
      <tr>      </tr>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <tr>
+     <p>&nbsp;</p>     <tr>
        <td width="100%" colspan="2" align="center"><span class="STYLE1"><font color="#000080">学员查询</font></span></td>
     </tr>
      <tr>
@@ -66,6 +45,7 @@
     </td>
     </tr>
   </table>
+  <p align="center"><a href="javascript:window.close()">[关闭]</a></p>
 </body>
 </html>
 

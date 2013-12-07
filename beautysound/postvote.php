@@ -1,13 +1,16 @@
+<?PHP 
+	include('isUser.php');
+	$UserId=trim($_SESSION["UserName"]);
+	$Pwd=trim($_SESSION["UserPwd"]);
+?>
 <?PHP
-	$ip = $_SERVER["REMOTE_ADDR"];
 	include('Class\VoteIP.php');
 	$objIP = new VoteIP();
-	if($objIP->exists($ip))  {
+	if($objIP->exists($UserId))  {
 		echo("你已经投过票了，不得重复投票！");
 	}
 	else {
-		$objIP->IP = $ip;
-		$objIP->insert();
+		$objIP->insert($UserId);
 		// 投票项目数量加1
 		$ids = $_GET["cid"];
 		include('Class\Student.php');

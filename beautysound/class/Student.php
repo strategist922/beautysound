@@ -30,7 +30,7 @@ Class Student
 		mysqli_close($this->conn);
     }
 	function updateCount($name) {
-			$sql = "UPDATEStudent SET votecount=votecount+1 WHERE RealName IN (" .$name . ")";
+			$sql = "UPDATE Student SET votecount=votecount+1 WHERE RealName IN (" .$name . ")";
 			$this->conn->query($sql);
 		}
      function GetCount()
@@ -119,7 +119,13 @@ function HaveUser()
 		} 
 		return $exist;
 	} 
-
+    function get()
+	{
+	 $sql=" Select RealName,votecount From Student ";
+	 $results = $this->conn->query($sql);
+	 return $results;
+	 }
+	 
 	//判断指定的个人名称是否存在
 	function HavePerson($uname)
 	{
@@ -135,5 +141,14 @@ function HaveUser()
 		} 
 		return $exist;
 	} 
+	function SumCount() {
+			$sql = "SELECT Sum(votecount) FROM Student";
+			$results = $this->conn->query($sql);			
+			if($row = $results->fetch_row())
+				Return (int)$row[0];
+			else
+				Return 0;				
+		}
+		
 }
 ?>

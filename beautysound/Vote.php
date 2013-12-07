@@ -1,3 +1,7 @@
+<?PHP include('isUser.php');
+$UserId=trim($_SESSION["UserName"]);
+$Pwd=trim($_SESSION["UserPwd"]);
+?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,7 +33,7 @@ function SelectChk()
 		}
 	}
 	strurl = "postvote.php?cid=" + strid;
-	if(!s)	{
+	if(s)	{
 		alert("请选择你支持的学员!");
 		return false;
 	}
@@ -53,7 +57,7 @@ function newwin(url) {
  <h1>&nbsp;</h1>
  <h1>&nbsp;</h1>
  <h1>&nbsp;</h1>
- <h1>选择您支持的学员</h1>
+ <h1>选择您支持的学员，梦想从这里起航</h1>
  <table border="0" width="98%" cellpadding="0" cellspacing="4">
   <tr>
     <td width="100%">
@@ -68,10 +72,9 @@ function newwin(url) {
 <?PHP
 	//取得当前投票人的ip地址，判断是否已经投票完毕	
 	include('class/VoteIp.php');				  
-	$ip = $_SERVER["REMOTE_ADDR"];
 	$objIP = new VoteIP();
 	$isvoted = 0;
-	if($objIP->exists($ip))
+	if($objIP->exists($UserId))
 		$isvoted = 1;
 ?>              
 	<tr><td bgcolor="#FFFFFF">
@@ -100,6 +103,7 @@ while($row = $results->fetch_row())
 	<?php	}
 		else {			 
 		?>	<input class=submit type=submit value="投 票 " name=submit onClick="return SelectChk();">
+		    <a href=default.php onClick="return newwin(this.href)"><font color=blue>查看投票结果</font></a>
 	<?php	}
 	 ?>
 		</td>

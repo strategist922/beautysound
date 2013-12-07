@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>学员或导师信息</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href=style.css rel=STYLESHEET type=text/css>
 </head>
@@ -27,7 +28,7 @@ function newswin(url) {
 
 	if ($flg==0)  {
 		$sTitle="学员信息";?>
-		<a href="Search.php"><font color=blue>[学员查询]</font></a> 
+		<h1><a href="Search.php"><font color=blue>[学员查询]</font></a> </h1>
 		<?PHP $results = $st->GetPersonlist();
 	}
 	else 
