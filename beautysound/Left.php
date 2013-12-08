@@ -36,6 +36,7 @@
    <tr>
     <td width="100%" align="center" bgcolor="#eeeeee">
          <a href="resume/index.php" target="_parent">个人数据管理</a>
+		<a href="LoginExit.php" target="_parent">退出登录</a> 
     </td>
    </tr>
   </table>         

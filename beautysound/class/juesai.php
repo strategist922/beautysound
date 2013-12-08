@@ -24,7 +24,7 @@ Class juesai
 	
 
 	//获取所有个人信息
-	function Getchusailist()
+	function Getjuesailist()
 	{
 		//设置查询的SELECT语句
 		$sql="SELECT * FROM juesai Order By score DESC";

@@ -12,7 +12,7 @@ Class Person
     function __construct() {
 		// 连接数据库
 		$this->conn = mysqli_connect("localhost", "root", "", "beautysound"); 
-		mysqli_query($this->conn, "SET NAMES gbk");
+		mysqli_query($this->conn, "SET NAMES utf8");
 	}
 		
 	function __destruct() {

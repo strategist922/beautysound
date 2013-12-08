@@ -1,14 +1,15 @@
 <?PHP
 	class VoteIP
 	{
-		var $conn;
+		
 
 		public $IP;		// 用户名	
+		var $conn;
 				
 		function __construct() {
 			// 连接数据库
-			$this->conn = mysqli_connect("localhost", "root", "", "Vote"); 
-			mysqli_query($this->conn, "SET NAMES gbk");
+			$this->conn = mysqli_connect("localhost", "root", "", "beautysound"); 
+			mysqli_query($this->conn, "SET NAMES utf8");
 		}
 		
 		function __destruct() {

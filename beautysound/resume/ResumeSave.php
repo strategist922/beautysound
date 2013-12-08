@@ -31,7 +31,6 @@
 ?>
 </body>
 <script language="javascript">
-  // 刷新父级窗口，延迟此关闭
   opener.location.reload();
   setTimeout("window.close()",600);
 </script>

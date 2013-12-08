@@ -3,7 +3,6 @@
 <title>用户注册</title>
 <link rel="stylesheet" href="../style.css">
 <Script Language="JavaScript">
-// 域校验
 function CheckFlds(){
  var p1,p2;
  p1 = document.form1.pwd.value;
@@ -75,8 +74,6 @@ return true;
   </table>
   <p align="center"><input type="submit" value=" 提 交 " name="B1"><input type="reset" value=" 重 写 " name="B2"></p>
 </form>
-
 </body>
-
 </html>
 

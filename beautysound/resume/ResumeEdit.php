@@ -21,6 +21,10 @@ return true;
 ?>
 <body topmargin=0 leftmargin="2">
 <form name="form1" method="POST" action="ResumeSave.php?action=edit" onSubmit="return CheckFlds()">
+  <br>
+  <br>
+  <br>
+  <br>
  <table border="1" cellspacing="0" width="100%" bordercolor="#64B9E1" bordercolorlight="#64B9E1" bordercolordark="#FFFFFF">
     <tr>
       <td width="20%" bgcolor="#eeeeee">ÓÃ»§Ãû</td>
@@ -57,4 +61,5 @@ return true;
 </form>
 <?PHP } ?>
 </body>
+
 </html>

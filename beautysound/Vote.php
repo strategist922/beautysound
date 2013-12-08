@@ -1,6 +1,5 @@
 <?PHP include('isUser.php');
 $UserId=trim($_SESSION["UserName"]);
-$Pwd=trim($_SESSION["UserPwd"]);
 ?>
 <html>
 <head>

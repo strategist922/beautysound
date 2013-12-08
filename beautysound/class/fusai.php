@@ -23,7 +23,7 @@ Class fusai
 	
 
 	//获取所有个人信息
-	function Getchusailist()
+	function Getfusailist()
 	{
 		//设置查询的SELECT语句
 		$sql="SELECT * FROM fusai Order By score DESC";

@@ -1,7 +1,6 @@
 <?PHP 
 	include('isUser.php');
 	$UserId=trim($_SESSION["UserName"]);
-	$Pwd=trim($_SESSION["UserPwd"]);
 ?>
 <?PHP
 	include('Class\VoteIP.php');
