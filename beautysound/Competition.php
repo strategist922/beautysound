@@ -21,20 +21,20 @@ function newswin(url) {
 }
 </script>
 <body>
-<h2>&nbsp;</h2>
-<p><span class="STYLE1 STYLE2">比赛结果</span> </p>
-<table>
-<tr>
-<td><p><a href='haixuanr.php' onClick="return newswin(this.href)">海选</a></p></td>
- <td>  <p><a href='chusair.php' onClick="return newswin(this.href)">初赛</a></p></td>
- <td> <p><a href='fusair.php' onClick="return newswin(this.href)">复赛</a></p></td>	 
- <td><p><a href='juesair.php' onClick="return newswin(this.href)">决赛</a></p></td>
- </tr>
-</table>
+<h2><span class="STYLE1 STYLE2">比赛结果</span> </h2>
+<h1><p><a href='haixuanr.php' class="STYLE1" onClick="return newswin(this.href)">海选</a></p>
+</h1>
+ <h1>  <p><a href='chusair.php' class="STYLE1" onClick="return newswin(this.href)">初赛</a></p>
+ </h1>
+ <h1> <p><a href='fusair.php' class="STYLE1" onClick="return newswin(this.href)">复赛</a></p>
+ </h1>	 
+ <h1><p><a href='juesair.php' class="STYLE1" onClick="return newswin(this.href)">决赛</a></p>
+ </h1>
+ 
  <p>&nbsp;</p>
  <p class="STYLE2">&nbsp;</p>
  <p class="STYLE2">&nbsp;</p>
- <p class="STYLE2 STYLE3">中国好声音赛制信息</p>
+ <p class="STYLE2">中国好声音赛制信息</p>
  <li class="STYLE1">第一阶段，“导师盲选”：这是最初的学员选拔阶段，明星导师仅选择声音，不受其他任何因素的干扰。这一环节在考验学员唱功的同时，更是多位明星导师决判力的大比拼。当然，即便在这一阶段没有被导师选中也不用着急，学员可以在训练营继续接受培训，等待下一次机遇。这个阶段将盲选出56位优秀学员。</li>
 
 <span class="STYLE1"></span>

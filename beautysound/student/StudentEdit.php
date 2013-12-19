@@ -1,7 +1,7 @@
 <?PHP include('isStudent.php'); ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>个人信息</title>
 <link rel="stylesheet" href="../style.css">
 <Script Language="JavaScript">

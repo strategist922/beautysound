@@ -5,9 +5,14 @@
 <link href=style.css rel=STYLESHEET type=text/css>
 </head>
 <body>
-   <h>复赛</h>
-   <table border="0" width="100%" cellspacing="6">
-   <tr><td>学员名</td><td>导师名</td><td>得分</td><td>评语</td></tr>
+    <table border="1" width="100%" cellspacing="0" cellpadding="0" bordercolorlight="#A4A4FF" bordercolordark="#FFFFFF">
+      <tr>
+        <td width="100%" bgcolor="#A4A4FF" height="18" align=center><font size=3><b>复赛</b></font></td>
+      </tr>
+      <tr>
+         <td width="100%" height="1" align="left" valign="top" bgcolor="#FFFF99">
+ <table border="1" width="100%" cellspacing="1" bordercolorlight="#A4A4FF" bordercolordark="#FFFFFF">
+   <tr><td width="15%">学员名</td><td width="15%">导师名</td><td width="15%">得分</td><td width="15%">评语</td></tr>
    
 <?PHP 
 	include('Class\fusai.php');
@@ -24,6 +29,7 @@
 </tr>
 <?PHP } 	
 ?>
+</table>
 </table>
  <p align="center"><a href="javascript:window.close()">[关闭]</a></p>
 </body>

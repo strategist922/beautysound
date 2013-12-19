@@ -30,7 +30,7 @@ Class Student
 		mysqli_close($this->conn);
     }
 	function updateCount($name) {
-			$sql = "UPDATE Student SET votecount=votecount+1 WHERE RealName IN (" .$name . ")";
+			$sql = "UPDATE Student SET votecount=votecount+1  WHERE RealName='".$uname."'";
 			$this->conn->query($sql);
 		}
      function GetCount()

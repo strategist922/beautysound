@@ -14,11 +14,7 @@
           <tr> 
             <td height="1"></td>
           </tr>
-         <tr > 
-            <td height="36"> 
-              <div align="center"><a href="ApplicationList.php" target="main">评价管理</a></div>
-           </td>
-  </tr>
+        
           <tr> 
             <td height="1"></td>
           </tr>

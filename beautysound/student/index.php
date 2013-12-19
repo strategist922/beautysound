@@ -1,9 +1,6 @@
-
 <html>
-
 <head><title>中国好声音</title>
 </head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <frameset rows="206,*" cols="*" FRAMEBORDER=1 bordercolor="#eeeeee" bordercolordark="#FFFFFF">
   <frame name="top" src="../head.htm" scrolling="no" noresize FRAMEBORDER=0>
   <frameset cols="150,*" noresize>
@@ -19,4 +16,5 @@
 </frameset>
 
 </html>
+
 

@@ -1,5 +1,5 @@
 <?PHP
-	class VoteIP
+	class voteip
 	{
 		
 
@@ -18,19 +18,28 @@
 		}
 
 		// 判断指定IP是否存在
-		function exists($_ip)
+	
+		function exists($ip)
 		{
-			$result = $this->conn->query("SELECT * FROM VoteIP WHERE IP='" . $_ip . "'");
-			if($row = $result->fetch_row()) 
-				return true;
-			else
-				return false;
+		    
+		$strSql="Select * From voteip Where IP='". $ip ."'";
+		$results = $this->conn->query($strSql);
+		if ($row = $results->fetch_row())
+		{
+			$exist=true;
 		}
-		
+		else
+		{
+			$exist=false;
+		} 
+		return $exist;
+			
+		}
+	
 		// 插入新记录
 		function insert()
 		{
-			$sql = "INSERT INTO VoteIP VALUES('" . $this->IP . "')";
+			$sql = "INSERT INTO VoteIP(IP) VALUES('" . $this->IP . "')";
 			$this->conn->query($sql);
 		}
 
